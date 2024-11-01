@@ -1,4 +1,4 @@
-//landing page: /ashes/home
+//landing page: /shivang/home
 
 require('dotenv').config();
 const express = require('express');
@@ -39,7 +39,7 @@ app.use(cookieParser()); //to extract and convert the cookies into object
 app.use(UserAuthentication); //checking the user
 
 //routes
-app.use('/ashes',staticRoutes); //Frontend routes
+app.use('/shivang',staticRoutes); //Frontend routes
 app.use('/user',userRoutes); //User handling routes (signup,login,logout)
 app.use('/admin',Authorization(['ADMIN']),adminRoutes); //Admin handlingroutes (delete,view all urls,view all users)
 app.use('/',Authorization(['USER','ADMIN']),urlroutes); //URL handling routes (shorten,redirecting,delete)
