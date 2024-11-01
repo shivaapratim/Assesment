@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +23,7 @@
 
         .container {
             background-color: #fff;
-            max-width:600px;
+            max-width: 600px;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -59,6 +60,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -66,6 +68,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container animate__animated animate__fadeInUp">
         <h1 class="text-center mb-4">Sign In</h1>
@@ -79,12 +82,14 @@
                 <input type="password" name="password" class="form-control" placeholder="Password" required>
             </div>
             <% if (locals.error) { %>
-                <p style="color: red; font-size: smaller; margin-left: 10px;"><%= error %></p>
-            <% } %>
-            <input type="submit" class="btn btn-primary" value="Sign In">
+                <p style="color: red; font-size: smaller; margin-left: 10px;">
+                    <%= error %>
+                </p>
+                <% } %>
+                    <input type="submit" class="btn btn-primary" value="Sign In">
         </form>
         <div class="text-center mt-3">
-            <p>Don't have an account? <a onclick="window.location.href='/ashes/signup'" href="#">Sign Up</a></p>
+            <p>Don't have an account? <a onclick="window.location.href='/shivang/signup'" href="#">Sign Up</a></p>
         </div>
     </div>
     <!-- Bootstrap JS and dependencies -->

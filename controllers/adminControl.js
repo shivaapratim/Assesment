@@ -43,7 +43,7 @@ async function handleAdminRemoveUser(req,res){ //path: /admin/delete
     if(isUser){//if user exists
         await URL.deleteMany({createdBy:isUser._id}); //deleting all the urls created by the user
         
-        return res.json({message:'User has been deleted!',redirect: '/ashes/home'});//redirecting to the homepage
+        return res.json({message:'User has been deleted!',redirect: '/shivang/home'});//redirecting to the homepage
     }else{
         console.error('Error while deleting');
         return res.status(404).send('User does not exist'); // sending 500 Internal Server Error in case of any other error

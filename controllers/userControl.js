@@ -21,7 +21,7 @@ async function handleUsers_SighUp(req,res){
         const token = setUser(newUser); 
         res.cookie("token", token); 
 
-        return res.redirect('/ashes/home');//redirecting to the home page
+        return res.redirect('/shivang/home');//redirecting to the home page
 
     } catch (error) { //if any error occurs
         console.error('Error during user sign-up:', error);
@@ -37,7 +37,7 @@ async function handleUsers_SignIn(req,res){
         if(isUser){ //if user is valid
             const token = setUser(isUser); //generating a token
             res.cookie("token",token); //passing the token as a cookie
-            return res.redirect('/ashes/home');//redirecting to the home page
+            return res.redirect('/shivang/home');//redirecting to the home page
         }else{
             //redirecting to the signin page with error message
             return res.status(404).render('signin',{error:'Invalid Credentials!'});//
@@ -51,7 +51,7 @@ async function handleUsers_SignIn(req,res){
 
 function handleUser_logout(req,res){
     res.clearCookie('token'); //clearing the token cookie
-    res.json({ message: 'Logged out successfully', redirect: '/ashes/signin'}); //redirecting to the signin page
+    res.json({ message: 'Logged out successfully', redirect: '/shivang/signin'}); //redirecting to the signin page
 }
 
 //exporting the functions

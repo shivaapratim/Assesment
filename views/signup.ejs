@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener - Sign Up</title>
     <link rel="icon" href="/assets/_226deb92-9e15-4948-99e4-a9e931bcb907.png" type="image/x-icon"> <!-- favicon -->
-        <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Animate.css for animations -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
@@ -72,26 +73,29 @@
     <div class="container animate__animated animate__fadeInUp">
         <h1 class="text-center mb-4">Sign Up</h1>
         <% if (locals.error) { %>
-            <p style="color: red; margin-left: 1px;"><%= error %></p>
-        <% } %>
-        <form action="/user" method="post">
-            <div class="form-group">
-                <label for="name">Username</label>
-                <input type="text" name="name" class="form-control" placeholder="Your Username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="Password" required>
-            </div>
-            <input type="submit" class="btn btn-primary" value="Sign Up">
-        </form>
-        <div class="text-center mt-3">
-            <p>Already have an account? <a onclick="window.location.href='/ashes/signin'" href="#">Sign In</a></p>
-        </div>
+            <p style="color: red; margin-left: 1px;">
+                <%= error %>
+            </p>
+            <% } %>
+                <form action="/user" method="post">
+                    <div class="form-group">
+                        <label for="name">Username</label>
+                        <input type="text" name="name" class="form-control" placeholder="Your Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Sign Up">
+                </form>
+                <div class="text-center mt-3">
+                    <p>Already have an account? <a onclick="window.location.href='/shivang/signin'" href="#">Sign In</a>
+                    </p>
+                </div>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
